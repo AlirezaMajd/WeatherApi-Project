@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css/family=Signika">
+</head>
+
+<body>
+
+    <div class="contact-section">
+
+
+        <form class="contact-form" action="contact" method="POST">
+            <input name="weather" type="text" class="contact-form-text" placeholder="Enter City...." required>
+            <input type="submit" class="contact-form-btn" value="Get weather">
+        </form>
+        <div class="box">
+            </form>
+            <div class="today">today</div>
+            <div class="data"><%=weather.date%></div>
+            <ul class="gambar-slider">
+
+                <figure>
+                    <img id="size" src="http://openweathermap.org/img/w/<%=weather.icon%>.png" alt="Image">
+                </figure>
+                <div class="city"><%=weather.city%></div>
+                <div class="celcius" id="size-cel"><%=weather.temperature%><i class="wi wi-degrees"></i></div>
+                <div class="weather"><%=weather.description%></div>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
